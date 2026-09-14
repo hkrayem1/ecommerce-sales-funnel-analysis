@@ -77,14 +77,13 @@ Calculated key commercial metrics including:
 
 ## Key Findings
 
-Add your actual findings here after reviewing your query results.
+## Key Findings
 
-Example:
-
-- The largest customer drop-off occurred between page view and add-to-cart.
-- Email generated a stronger purchase conversion rate than several other acquisition channels.
-- Customers who entered the checkout stage had a high probability of completing their purchase.
-- Average order value was approximately £XX.
+- 4,291 unique users viewed products, with 1,338 progressing to add-to-cart.
+- View-to-cart conversion was approximately 31%.
+- Around 71% of customers who added an item to their cart progressed to checkout.
+- Checkout completion was strong, with approximately 92% of users reaching payment going on to purchase.
+- The largest funnel drop-off occurred between product viewing and cart addition.
 
 ## Recommendations
 
