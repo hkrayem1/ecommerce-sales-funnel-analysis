@@ -1,13 +1,12 @@
 # E-commerce Sales Funnel Analysis
-E-commerce sales funnel analysis using SQL and Google BigQuery
 
 ## Project Overview
 
 This project analyses customer behaviour across an e-commerce sales funnel using SQL and Google BigQuery.
 
-The dataset contains over 9,000 customer event records covering page views, add-to-cart events, checkout activity, payment activity and purchases.
+The dataset contains over 9,000 customer event records covering page views, add-to-cart activity, checkout, payment and purchases.
 
-The objective was to understand where customers drop out of the funnel, compare the performance of different traffic sources and evaluate key revenue metrics.
+The objective was to identify where customers drop out of the sales funnel, compare conversion performance across traffic sources, analyse time-to-purchase and evaluate key revenue metrics.
 
 ## Tools Used
 
@@ -17,7 +16,7 @@ The objective was to understand where customers drop out of the funnel, compare 
 
 ## Dataset
 
-The dataset contains customer interaction events including:
+The dataset contains customer interaction data including:
 
 - User ID
 - Event type
@@ -26,7 +25,7 @@ The dataset contains customer interaction events including:
 - Transaction amount
 - Traffic source
 
-Key funnel stages analysed:
+The customer journey consists of five funnel stages:
 
 1. Page View
 2. Add to Cart
@@ -34,72 +33,101 @@ Key funnel stages analysed:
 4. Payment Information
 5. Purchase
 
-## Analysis Performed
+---
 
-### Sales Funnel Analysis
+## 1. Sales Funnel Analysis
 
-Measured the number of unique users reaching each stage of the customer journey and calculated conversion rates between stages.
+I analysed the number of unique users progressing through each stage of the sales funnel and calculated conversion rates between consecutive stages.
 
-### Traffic Source Analysis
+![Sales Funnel Results](Images/funnel_conversion_results.png)
 
-Compared customer conversion across different acquisition channels to identify which traffic sources generated the strongest purchasing behaviour.
+### Key Finding
 
-### Time-to-Conversion Analysis
+The largest customer drop-off occurred between page view and add-to-cart, indicating that converting initial product interest into purchase intent represents the main opportunity for funnel improvement.
 
-Calculated the average time taken for customers to move from:
+---
 
-- Page view to add to cart
-- Add to cart to purchase
-- Page view to purchase
+## 2. Traffic Source Analysis
 
-### Revenue Analysis
+I compared funnel performance across organic, paid ads, email and social traffic to understand whether high traffic volume translated into purchasing behaviour.
 
-Calculated key commercial metrics including:
+![Traffic Source Performance](Images/traffic_source_performance.png)
 
-- Total revenue
+### Key Findings
+
+- **Email was the highest-converting traffic source**, achieving a 62.45% view-to-cart rate and a 33.91% purchase conversion rate despite generating only 522 unique views.
+- **Social generated 1,472 unique views but had the lowest purchase conversion rate at 6.93%**, indicating that high traffic volume did not translate into strong purchasing behaviour.
+- **Organic generated the highest traffic volume**, with 2,038 unique views and 343 purchases.
+- **Paid ads achieved a 21.07% purchase conversion rate**, outperforming organic and social on conversion efficiency.
+- Cart-to-purchase conversion was relatively consistent across all four channels at approximately 51%–57%, suggesting that the largest differences in channel performance occur earlier in the customer journey.
+
+---
+
+## 3. Time-to-Conversion Analysis
+
+I used timestamp analysis to measure how long converted customers took to progress through the sales journey.
+
+![Time to Conversion](Images/time_to_conversion.png)
+
+The analysis measured:
+
+- Average time from page view to add-to-cart
+- Average time from add-to-cart to purchase
+- Average total journey time from initial page view to purchase
+
+This provides insight into how quickly purchasing intent develops after a customer first interacts with the website.
+
+---
+
+## 4. Revenue Analysis
+
+I analysed purchasing activity and revenue performance to calculate key commercial metrics.
+
+![Revenue Analysis](Images/revenue_analysis.png)
+
+Metrics calculated included:
+
+- Total visitors
 - Total buyers
 - Total orders
-- Average order value
+- Total revenue
+- Average order value (AOV)
 - Revenue per buyer
 - Revenue per visitor
 
+These metrics help connect customer funnel performance with commercial outcomes.
+
+---
+
 ## SQL Techniques Used
+
+The analysis demonstrates the use of:
 
 - Common Table Expressions (CTEs)
 - CASE statements
 - Conditional aggregation
-- COUNT DISTINCT
-- GROUP BY
-- HAVING
+- COUNT and COUNT DISTINCT
+- GROUP BY and HAVING
 - SUM and AVG
 - TIMESTAMP_DIFF
 - Conversion-rate calculations
+- Revenue KPI calculations
 
-## Key Findings
+---
 
-Funnel Conversion
-- 4,268 unique users viewed products, with 1,332 progressing to add-to-cart.
-- View-to-cart conversion was approximately 31%.
-- Around 71% of customers who added an item to their cart progressed to checkout.
-- Checkout completion was strong, with approximately 92% of users reaching payment going on to purchase.
-
-Funnel by Source
-- The largest funnel drop-off occurred between product viewing and cart addition.
-- The largest funnel drop-off occurred between page view and add-to-cart, indicating that converting initial product interest into purchase intent is the main area of opportunity.
-- Email was the highest-converting traffic source, with a 62.45% view-to-cart rate and 33.91% purchase conversion rate, despite generating only 522 unique views.
-- Social generated 1,472 unique views but had the weakest purchase conversion rate at just 6.93%, suggesting that high traffic volume did not translate into strong purchasing behaviour.
-- Paid ads performed comparatively well, achieving a 21.07% purchase conversion rate, while organic traffic generated the highest overall volume with 2,038 unique views and 343 purchases.
-- Once users added an item to their cart, conversion was relatively consistent across channels, with cart-to-purchase rates ranging from approximately 51% to 57%. This suggests that the biggest differences between traffic sources occur earlier in the customer journey.
-
-## Recommendations
+## Business Recommendations
 
 Based on the analysis:
 
-- Investigate opportunities to improve the transition from product viewing to cart addition.
-- Prioritise acquisition channels with stronger purchase conversion.
-- Monitor customer acquisition cost alongside revenue per visitor and average order value.
+- **Prioritise improvements at the top of the funnel.** The largest drop-off occurs between page viewing and adding a product to cart, suggesting that product pages, calls-to-action, pricing or product positioning should be investigated.
+- **Use email as a high-intent conversion channel.** Email traffic demonstrated the strongest purchase conversion rate and could justify further investment in customer capture, retention and email campaigns.
+- **Review the quality and objectives of social traffic.** Social generated substantial traffic but had the weakest purchase conversion rate, suggesting that campaigns may be more effective for awareness than direct sales unless targeting is improved.
+- **Continue evaluating paid acquisition against commercial returns.** Paid ads produced relatively strong conversion performance, but advertising costs should be compared with average order value and revenue per visitor before increasing investment.
 
-## Files
+---
 
-- `ecommerce_funnel_analysis.sql` — SQL queries used for the analysis
+## Project Files
+
+- `ecommerce_funnel_analysis.sql` — SQL queries used to perform the analysis
 - `user_events.csv` — source dataset
+- `Images/` — screenshots of the analysis results
