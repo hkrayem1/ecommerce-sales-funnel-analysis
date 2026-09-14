@@ -77,13 +77,19 @@ Calculated key commercial metrics including:
 
 ## Key Findings
 
-## Key Findings
-
-- 4,291 unique users viewed products, with 1,338 progressing to add-to-cart.
+Funnel Conversion
+- 4,268 unique users viewed products, with 1,332 progressing to add-to-cart.
 - View-to-cart conversion was approximately 31%.
 - Around 71% of customers who added an item to their cart progressed to checkout.
 - Checkout completion was strong, with approximately 92% of users reaching payment going on to purchase.
+
+Funnel by Source
 - The largest funnel drop-off occurred between product viewing and cart addition.
+- The largest funnel drop-off occurred between page view and add-to-cart, indicating that converting initial product interest into purchase intent is the main area of opportunity.
+- Email was the highest-converting traffic source, with a 62.45% view-to-cart rate and 33.91% purchase conversion rate, despite generating only 522 unique views.
+- Social generated 1,472 unique views but had the weakest purchase conversion rate at just 6.93%, suggesting that high traffic volume did not translate into strong purchasing behaviour.
+- Paid ads performed comparatively well, achieving a 21.07% purchase conversion rate, while organic traffic generated the highest overall volume with 2,038 unique views and 343 purchases.
+- Once users added an item to their cart, conversion was relatively consistent across channels, with cart-to-purchase rates ranging from approximately 51% to 57%. This suggests that the biggest differences between traffic sources occur earlier in the customer journey.
 
 ## Recommendations
 
