@@ -4,7 +4,9 @@ E-commerce sales funnel analysis using SQL and Google BigQuery
 ## Project Overview
 
 This project analyses customer behaviour across an e-commerce sales funnel using SQL and Google BigQuery.
+
 The dataset contains over 9,000 customer event records covering page views, add-to-cart events, checkout activity, payment activity and purchases.
+
 The objective was to understand where customers drop out of the funnel, compare the performance of different traffic sources and evaluate key revenue metrics.
 
 ## Tools Used
