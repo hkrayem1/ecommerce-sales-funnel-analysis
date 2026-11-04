@@ -8,6 +8,14 @@ The dataset contains over 9,000 customer event records covering page views, add-
 
 The objective was to identify where customers drop out of the sales funnel, compare conversion performance across traffic sources, analyse time-to-purchase and evaluate key revenue metrics.
 
+### Dataset
+
+This project uses five fully synthetic datasets generated specifically for portfolio and educational purposes. All customer records, agent identities and support interactions are fictional and do not represent actual organisations or individuals.
+
+The raw ticket dataset contains 52,518 records, including 38 duplicate records identified during data preparation. Following deduplication, 52,480 unique tickets were retained for analysis.
+
+The original datasets are available in the `data/` folder to support transparency and reproducibility.
+
 ## Tools Used
 
 - SQL
